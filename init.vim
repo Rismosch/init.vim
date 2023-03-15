@@ -191,34 +191,6 @@ require"fidget".setup{}
 
 
 
--- Terminal
-require("toggleterm").setup{}
-local Terminal = require('toggleterm.terminal').Terminal
-local powershell = Terminal:new({
-    cmd = "powershell",
-    direction = "float",
-    float_opts = {
-        border = "double",
-    },
-    on_open = function(term)
-        vim.cmd("startinsert!")
-        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
-    end,
-        on_close = function(term)
-        vim.cmd("startinsert!")
-    end,
-})
-
-function _powershell_toggle()
-    powershell:toggle()
-end
-
-vim.api.nvim_set_keymap("n", "ß", "<cmd>lua _powershell_toggle()<Cr>", {noremap = true, silent = true})
-
-
-
-
-
 -- Syntax highlighting
 local null_ls = require("null-ls")
 
@@ -462,9 +434,10 @@ set autoindent expandtab tabstop=4 shiftwidth=4
 
 " https://jeffkreeftmeijer.com/vim-number/
  set number
- augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-augroup END
+ set rnu
+" augroup numbertoggle
+"  autocmd!
+"  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+"  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+"augroup END
 
