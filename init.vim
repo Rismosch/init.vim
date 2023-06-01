@@ -46,9 +46,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 " File explorer
 Plug 'nvim-tree/nvim-tree.lua'
 
-" Tabs
-Plug 'romgrk/barbar.nvim'
-
 " Autocompletion
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -66,9 +63,6 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'j-hui/fidget.nvim'
-
-" Terminal
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 " Fuzzy finding
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -103,35 +97,6 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 require("nvim-tree").setup()
-
-
-
-
--- Set barbar's options
-require'bufferline'.setup {
-  animation = false,
-}
-
-local nvim_tree_events = require('nvim-tree.events')
-local bufferline_api = require('bufferline.api')
-
-local function get_tree_size()
-  return require'nvim-tree.view'.View.width
-end
-
-nvim_tree_events.subscribe('TreeOpen', function()
-  bufferline_api.set_offset(get_tree_size())
-end)
-
-nvim_tree_events.subscribe('Resize', function()
-  bufferline_api.set_offset(get_tree_size())
-end)
-
-nvim_tree_events.subscribe('TreeClose', function()
-  bufferline_api.set_offset(0)
-end)
-
--- Set barbar's highlighting
 
 
 
@@ -397,47 +362,15 @@ END
 
 
 
+" Other Settings
+
 :map <C-ü> <C-]>
-
-
-
-
 
 set guifont=Consolas,\ Segoe\ UI\ Emoji:h14
 
 colorscheme dayfox
 
-
-hi BufferCurrentSign guibg=#87dfff
-hi BufferCurrent guibg=#87dfff
-hi BufferCurrentMod guibg=#87dfff
-hi BufferCurrent guifg=#005f5f
-hi BufferCurrentMod guifg=#fbe8a2
-
-hi BufferVisibleSign guibg=#606060
-hi BufferVisible guibg=#606060
-hi BufferVisibleMod guibg=#606060
-hi BufferVisible guifg=#f0f0f0
-hi BufferVisibleMod guifg=#ff8700
-
-hi BufferInactiveSign guibg=#ffffff
-hi BufferInactive guibg=#ffffff
-hi BufferInactiveMod guibg=#ffffff
-hi BufferInactive guifg=#005f5f
-hi BufferInactiveMod guifg=#ff8700
-
-
-
 set clipboard+=unnamedplus
-
 set autoindent expandtab tabstop=4 shiftwidth=4
-
-" https://jeffkreeftmeijer.com/vim-number/
- set number
- set rnu
-" augroup numbertoggle
-"  autocmd!
-"  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-"  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-"augroup END
-
+set number
+set rnu
