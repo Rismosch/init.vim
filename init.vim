@@ -11,7 +11,7 @@ if exists("g:neovide")
     let g:neovide_refresh_rate_idle = 15
     let g:neovide_no_idle = v:false
     let g:neovide_confirm_quit = v:true
-    let g:neovide_fullscreen = v:false
+    let g:neovide_fullscreen = v:true
     let g:neovide_remember_window_size = v:true
 
 
@@ -131,7 +131,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {{'filename', path = 1}},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
@@ -139,12 +139,19 @@ require('lualine').setup {
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
+    lualine_c = {{'filename', path = 1}},
     lualine_x = {'location'},
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
+  tabline = {
+    lualine_a = {'tabs'},
+    lualine_b = {'buffers'},
+    lualine_c = {{'filename', path = 1}, 'filesize'},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {},
+  },
   winbar = {},
   inactive_winbar = {},
   extensions = {}
