@@ -11,7 +11,7 @@ if exists("g:neovide")
     let g:neovide_refresh_rate_idle = 15
     let g:neovide_no_idle = v:false
     let g:neovide_confirm_quit = v:true
-    let g:neovide_fullscreen = v:true
+    let g:neovide_fullscreen = v:false
     let g:neovide_remember_window_size = v:true
 
 
