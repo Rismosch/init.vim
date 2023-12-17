@@ -7,7 +7,7 @@ if exists("g:neovide")
     let g:neovide_scroll_animation_length = 0.3
     let g:neovide_hide_mouse_when_typing = v:true
     let g:neovide_underline_automatic_scaling = v:false
-    let g:neovide_refresh_rate = 144
+    let g:neovide_refresh_rate = 60
     let g:neovide_refresh_rate_idle = 15
     let g:neovide_no_idle = v:false
     let g:neovide_confirm_quit = v:true
@@ -62,7 +62,7 @@ Plug 'lewis6991/gitsigns.nvim'
 " Statusline
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'j-hui/fidget.nvim'
+Plug 'j-hui/fidget.nvim', { 'tag': 'legacy' }
 
 " Fuzzy finding
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -373,7 +373,7 @@ END
 
 :map <C-ü> <C-]>
 
-set guifont=Consolas,\ Segoe\ UI\ Emoji:h14
+set guifont=Mono:h18
 
 colorscheme dayfox
 
