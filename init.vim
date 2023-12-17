@@ -62,7 +62,7 @@ Plug 'lewis6991/gitsigns.nvim'
 " Statusline
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'j-hui/fidget.nvim'
+" Plug 'j-hui/fidget.nvim'
 
 " Fuzzy finding
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -157,7 +157,7 @@ require('lualine').setup {
   extensions = {}
 }
 
-require"fidget".setup{}
+-- require"fidget".setup{}
 
 
 
@@ -170,7 +170,7 @@ null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.completion.spell,
+        -- null_ls.builtins.completion.spell,
     },
 })
 
@@ -334,8 +334,6 @@ require('lspconfig')['rust_analyzer'].setup{
 
 
 
-
-
 -- Color Theme
 require('modes').setup({
 	colors = {
@@ -372,6 +370,7 @@ END
 " Other Settings
 
 :map <C-ü> <C-]>
+nnoremap <C-f> :Telescope find_files<CR>
 
 set guifont=Consolas,\ Segoe\ UI\ Emoji:h14
 
