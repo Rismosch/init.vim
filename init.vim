@@ -367,7 +367,7 @@ END
 :map <C-ü> <C-]>
 nnoremap <C-f> :Telescope find_files<CR>
 
-set guifont=Mono:h18
+set guifont=Fira\ Code:h18
 
 colorscheme dayfox
 
