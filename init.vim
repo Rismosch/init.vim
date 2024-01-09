@@ -61,7 +61,6 @@ Plug 'lewis6991/gitsigns.nvim'
 
 " Statusline
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
 
 " Fuzzy finding
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
@@ -156,8 +155,6 @@ require('lualine').setup {
   extensions = {}
 }
 
--- require"fidget".setup{}
-
 
 
 
@@ -219,7 +216,8 @@ require'nvim-treesitter.configs'.setup {
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 
-require("ibl").setup()
+-- indent-blankline
+require("ibl").setup{ scope = { enabled = false } }
 
 
 -- Set up nvim-cmp.
