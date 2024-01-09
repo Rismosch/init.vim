@@ -64,7 +64,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
 " Fuzzy finding
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 
 " Syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -219,9 +219,7 @@ require'nvim-treesitter.configs'.setup {
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-}
+require("ibl").setup()
 
 
 -- Set up nvim-cmp.
@@ -379,3 +377,4 @@ set clipboard+=unnamedplus
 set autoindent expandtab tabstop=4 shiftwidth=4
 set number
 set rnu
+" set linebreak
