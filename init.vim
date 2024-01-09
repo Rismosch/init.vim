@@ -7,7 +7,7 @@ if exists("g:neovide")
     let g:neovide_scroll_animation_length = 0.3
     let g:neovide_hide_mouse_when_typing = v:true
     let g:neovide_underline_automatic_scaling = v:false
-    let g:neovide_refresh_rate = 60
+    let g:neovide_refresh_rate = 144
     let g:neovide_refresh_rate_idle = 15
     let g:neovide_no_idle = v:false
     let g:neovide_confirm_quit = v:true
@@ -61,7 +61,6 @@ Plug 'lewis6991/gitsigns.nvim'
 
 " Statusline
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
 
 " Fuzzy finding
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
@@ -156,8 +155,6 @@ require('lualine').setup {
   extensions = {}
 }
 
--- require"fidget".setup{}
-
 
 
 
@@ -219,7 +216,9 @@ require'nvim-treesitter.configs'.setup {
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 
-require("ibl").setup()
+-- indent-blankline
+require("ibl").setup { scope = { enabled = false } }
+
 
 
 -- Set up nvim-cmp.
@@ -369,7 +368,7 @@ END
 :map <C-ü> <C-]>
 nnoremap <C-f> :Telescope find_files<CR>
 
-set guifont=Mono:h18
+" set guifont=Monospace:h18
 
 colorscheme dayfox
 
