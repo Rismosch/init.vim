@@ -321,7 +321,7 @@ require('lspconfig')['rust_analyzer'].setup{
   settings = {
     ["rust-analyzer"] = {
         checkOnSave = {
-            command = "clippy",
+            command = "check",
         }
     }
   }
