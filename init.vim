@@ -44,7 +44,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " File explorer
-Plug 'nvim-tree/nvim-tree.lua'
+" Plug 'nvim-tree/nvim-tree.lua'
 
 " Autocompletion
 Plug 'neovim/nvim-lspconfig'
@@ -91,10 +91,10 @@ set completeopt=menu,menuone,noselect
 lua << END
 
 -- File Explorer
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.opt.termguicolors = true
-require("nvim-tree").setup()
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
+-- vim.opt.termguicolors = true
+-- require("nvim-tree").setup()
 
 
 
@@ -368,12 +368,9 @@ END
 :map <C-ü> <C-]>
 nnoremap <C-f> :Telescope find_files<CR>
 
-" set guifont=Monospace:h18
-
 colorscheme dayfox
 
 set clipboard+=unnamedplus
 set autoindent expandtab tabstop=4 shiftwidth=4
 set number
 set rnu
-" set linebreak
