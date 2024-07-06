@@ -30,7 +30,6 @@ if exists("g:neovide")
     let g:neovide_cursor_vfx_particle_speed = 10.0
     let g:neovide_cursor_vfx_particle_phase = 1.5 
     let g:neovide_cursor_vfx_particle_curl = 1.0
-
 endif
 
 
