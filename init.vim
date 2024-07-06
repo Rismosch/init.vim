@@ -366,7 +366,8 @@ END
 :map <C-ü> <C-]>
 nnoremap <C-f> :Telescope find_files<CR>
 
-set guifont=Fira\ Code:h18
+set guifont=Fira\ Code:h16
+
 
 colorscheme dayfox
 
@@ -374,4 +375,4 @@ set clipboard+=unnamedplus
 set autoindent expandtab tabstop=4 shiftwidth=4
 set number
 set rnu
-" set linebreak
+"" set linebreak
