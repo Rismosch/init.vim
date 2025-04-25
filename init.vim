@@ -36,7 +36,7 @@ lua << END
 -- menuone: popup even when there's only one match
 -- noinsert: Do not insert text until a selection is made
 -- noselect: Do not auto-select, nvim-cmp plugin will handle this for us.
-vim.o.completeopt = "menuone,noinsert,noselect"
+vim.o.completeopt = "menuone,noinsert,noselect,fuzzy"
 
 -- Avoid showing extra messages when using completion
 vim.opt.shortmess = vim.opt.shortmess + "c"
@@ -55,18 +55,18 @@ local function on_attach(client, buffer)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
     vim.keymap.set("n", "ga", vim.lsp.buf.code_action, keymap_opts)
 
-    -- Show diagnostic popup on cursor hover
-    local diag_float_grp = vim.api.nvim_create_augroup("DiagnosticFloat", { clear = true })
-    vim.api.nvim_create_autocmd("CursorHold", {
-      callback = function()
-        vim.diagnostic.open_float(nil, { focusable = false })
-      end,
-      group = diag_float_grp,
-    })
+    ---- Show diagnostic popup on cursor hover
+    --local diag_float_grp = vim.api.nvim_create_augroup("DiagnosticFloat", { clear = true })
+    --vim.api.nvim_create_autocmd("CursorHold", {
+    --  callback = function()
+    --    vim.diagnostic.open_float(nil, { focusable = false })
+    --  end,
+    --  group = diag_float_grp,
+    --})
 
     -- Goto previous/next diagnostic warning/error
-    vim.keymap.set("n", "ge", vim.diagnostic.goto_prev, keymap_opts)
-    vim.keymap.set("n", "g]", vim.diagnostic.goto_next, keymap_opts)
+    vim.keymap.set("n", "g[", vim.diagnostic.goto_prev, keymap_opts)
+    vim.keymap.set("n", "ge", vim.diagnostic.goto_next, keymap_opts)
 end
 
 -- Configure LSP through rust-tools.nvim plugin.
@@ -98,6 +98,9 @@ local opts = {
         -- enable clippy on save
         checkOnSave = {
           command = "check",
+        },
+        completion = {
+          autoimport = false,
         },
       },
     },
@@ -143,6 +146,15 @@ cmp.setup({
 -- have a fixed column for the diagnostics to appear in
 -- this removes the jitter when warnings/errors flow in
 -- vim.wo.signcolumn = "yes"
+
+require('telescope').setup{
+  defaults = {
+    file_ignore_patterns = {
+      "%.git/",
+      "vendor",
+    }
+  }
+}
 
 END
 
