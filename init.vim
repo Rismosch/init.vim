@@ -4,6 +4,7 @@ call plug#begin()
 " Dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " cmp LSP completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -96,7 +97,7 @@ local opts = {
       -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
       ["rust-analyzer"] = {
         -- enable clippy on save
-        checkOnSave = {
+        check = {
           command = "check",
         },
         completion = {
