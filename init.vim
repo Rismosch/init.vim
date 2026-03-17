@@ -123,9 +123,4 @@ set number
 set rnu
 
 " color scheme
-" my favorites:
-" - delek:   light, contrast high
-" - shine:   light, contrast low
-" - koehler: dark,  contrast high
-" - slate:   dark,  contrast low
-:colorscheme slate
+:source ~/.config/nvim/ris_color_scheme.vim
