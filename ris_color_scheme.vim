@@ -70,7 +70,7 @@ hi Special guifg=#fa2411 guibg=NONE guisp=NONE gui=NONE ctermfg=186 ctermbg=NONE
   hi SpellLocal guifg=#ffafaf guibg=NONE guisp=#ffafaf gui=undercurl ctermfg=217 ctermbg=NONE cterm=underline term=underline
   hi SpellRare guifg=#ffd7af guibg=NONE guisp=#ffd7af gui=undercurl ctermfg=223 ctermbg=NONE cterm=underline term=underline
 hi Statement guifg=#ca077f guibg=NONE guisp=NONE gui=NONE ctermfg=68 ctermbg=NONE cterm=NONE term=NONE
-hi StatusLine guifg=#000000 guibg=#b8ffa9 guisp=NONE gui=NONE ctermfg=16 ctermbg=144 cterm=NONE term=bold,reverse
+hi StatusLine guifg=#000000 guibg=#d0ffc1 guisp=NONE gui=NONE ctermfg=16 ctermbg=144 cterm=NONE term=bold,reverse
 hi StatusLineNC guifg=#666666 guibg=#eeeeee guisp=NONE gui=NONE ctermfg=241 ctermbg=144 cterm=NONE term=bold,underline
 hi StatusLineTerm guifg=#000000 guibg=#01b100 guisp=NONE gui=NONE ctermfg=16 ctermbg=144 cterm=NONE term=bold,reverse
 hi StatusLineTermNC guifg=#666666 guibg=#eeeeee guisp=NONE gui=NONE ctermfg=241 ctermbg=144 cterm=NONE term=bold,underline
@@ -78,7 +78,7 @@ hi String guifg=#964e00 guibg=NONE guisp=NONE gui=NONE ctermfg=117 ctermbg=NONE 
 hi Structure guifg=#2c4dd9 guibg=NONE guisp=NONE gui=NONE ctermfg=46 ctermbg=NONE cterm=NONE term=NONE
 hi TabLine guifg=#666666 guibg=#eeeeee guisp=NONE gui=NONE ctermfg=241 ctermbg=236 cterm=NONE term=bold,underline
 hi TabLineFill guifg=#000000 guibg=#eeeeee guisp=NONE gui=NONE ctermfg=210 ctermbg=236 cterm=NONE term=NONE
-hi TabLineSel guifg=#000000 guibg=#b8ffa9 guisp=NONE gui=NONE ctermfg=16 ctermbg=144 cterm=NONE term=bold,reverse
+hi TabLineSel guifg=#000000 guibg=#d0ffc1 guisp=NONE gui=NONE ctermfg=16 ctermbg=144 cterm=NONE term=bold,reverse
 hi Title guifg=#ff8500 guibg=NONE guisp=NONE gui=bold ctermfg=220 ctermbg=NONE cterm=bold term=NONE
   hi TitleBar guifg=#ffffff guibg=#3c3c3c guisp=NONE gui=NONE ctermfg=231 ctermbg=237 cterm=NONE term=NONE
   hi TitleBarNC guifg=#666666 guibg=#2c2c2c guisp=NONE gui=NONE ctermfg=241 ctermbg=236 cterm=NONE term=NONE
