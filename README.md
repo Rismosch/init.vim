@@ -1,4 +1,6 @@
 # init.vim
-My current configuration for Neovide.
+My current configuration for [Neovim](https://neovim.io/).
 
-https://github.com/neovide/neovide
+For Windows, copy `ris_color_scheme.vim` to:
+
+  `C:\Users\<username>\.config\nvim\ris_color_scheme.vim`
