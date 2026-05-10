@@ -32,11 +32,14 @@ require('nvim-treesitter').setup {
 
 require('nvim-treesitter').install ({
     'bash',
+    'bibtex',
     'c',
     'cmake',
     'cpp',
     'diff',
     'glsl',
+    'latex',
+    'lua',
     'make',
     'markdown',
     'markdown_inline',
