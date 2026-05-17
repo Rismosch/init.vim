@@ -95,7 +95,7 @@ vim.lsp.config('rust_analyzer', {
 vim.lsp.enable('clangd')
 vim.lsp.enable('rust_analyzer')
 
---vim.keymap.set('n', 'ge', vim.diagnostic.open_float, { desc = "Show diagnostics" })
+vim.keymap.set('n', 'gk', vim.diagnostic.open_float, { desc = "Show diagnostics" })
 vim.keymap.set('n', 'ge', vim.diagnostic.goto_next)
 vim.keymap.set('n', 'gE', vim.diagnostic.goto_prev)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "LSP: goto definition" })
