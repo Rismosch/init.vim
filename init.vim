@@ -108,7 +108,9 @@ vim.keymap.set('n', 'K',  vim.lsp.buf.hover, { desc = "LSP: hover docs" })
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = {
-      "%.git/",
+      ".git",
+      "cli_out",
+      "target",
       "vendor",
     }
   }
